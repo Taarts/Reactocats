@@ -4,30 +4,32 @@ export function Navigation() {
   return (
     <div>
       <nav>
-        <ul>
-          <li>
-            <a href="#">
-              <img
-                id="git"
-                src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png"
-                width="45"
-                height="45"
-                alt="GithubLogo"
-              />
-            </a>
-          </li>
-        </ul>
-        <ul>
-          <li>
-            <a href="#">Octodex</a>
-          </li>
-          <li>
-            <a href="#">Home</a>
-          </li>
-          <li>
-            <a href="https://octodex.github.com/faq/">FAQ</a>
-          </li>
-        </ul>
+        <div className="left-hand-side">
+          <ul>
+            <li>
+              <a href="#">
+                <img
+                  id="git"
+                  src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png"
+                  width="45"
+                  height="45"
+                  alt="GithubLogo"
+                />
+              </a>
+            </li>
+          </ul>
+          <ul>
+            <li>
+              <a href="#">Octodex</a>
+            </li>
+            <li>
+              <a href="#">Home</a>
+            </li>
+            <li>
+              <a href="https://octodex.github.com/faq/">FAQ</a>
+            </li>
+          </ul>
+        </div>
       </nav>
       <nav>
         <ul>

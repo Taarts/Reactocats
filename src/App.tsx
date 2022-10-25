@@ -1,6 +1,7 @@
 import React from 'react'
 import { Navigation } from './components/navigation/Navigation'
 import { Octocat } from './components/Octocat'
+// import octocat from './octocat.json'
 
 export function App() {
   return (

@@ -2,14 +2,17 @@ import React from 'react'
 
 type octocatProps = {
   name: string
-  creator: string
-  catNum: string
+  image: string
+  link: string
+  authorLink: string
+  catNum: number
+  authorImg: string
 }
 
 export function Octocat(props: octocatProps) {
   return (
     <div className="octocat">
-      <a href={`https://octodex.github.com//${props.name}/`}>
+      <a href={props.name}>
         <img
           className="kitty"
           src={`https://octodex.github.com//images/${props.name}.png`}
@@ -20,19 +23,19 @@ export function Octocat(props: octocatProps) {
       </a>
       <ul className="tagged">
         <li>
-          <text>{props.catNum}</text>
-          <a href={`https://octodex.github.com//${props.name}/`}>
+          {props.catNum}
+          <a href={props.name}>
             <strong>{props.name}</strong>
           </a>
         </li>
         <li>
-          <a href={`https://github.com/${props.creator}`}>
+          <a href={props.authorLink}>
             <img
               className="small"
-              src={`https://github.com/${props.creator}.png`}
+              src={props.authorImg}
               width="24px"
               height="24px"
-              alt={props.creator}
+              alt={props.authorLink}
             />
           </a>
         </li>
