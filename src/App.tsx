@@ -1,5 +1,5 @@
 import React from 'react'
-import { Navigation } from './components/Navigation'
+import { Navigation } from './components/navigation/Navigation'
 import { Octocat } from './components/Octocat'
 
 export function App() {
