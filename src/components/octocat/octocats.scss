@@ -1,6 +1,6 @@
 :root {
   font-size: 16px/1 em;
-  font-family: 'Inter', sans-serif;
+  font-family: 'Sofia Pro', sans-serif;
 }
 
 /* html {
@@ -9,38 +9,27 @@
 body {
   margin: 0;
 }
-// header {
-//   position: sticky;
-//   width: 100%;
-//   background-color: azure;
-//   opacity: 90%;
-//   display: flex;
-//   justify-content: space-between;
-//   border-bottom: 1px solid lightgray;
-//   flex-wrap: wrap;
-// }
-
-// .container {
-//   display: flex;
-//   justify-content: space-evenly;
-//   flex-wrap: wrap;
-//   width: 100%;
-// }
-
-// nav > .left-hand-side {
-//   display: flex;
-//   justify-content: flex-start;
-//   margin: 0;
-//   padding: 0.5em;
-//   text-decoration: none;
-//   list-style: none;
-// }
-
-// .nav-space {
-//   width: 300px;
-//   justify-content: center;
-//   align-items: center;
-// }
+header {
+  position: fixed;
+  width: 100%;
+  background-color: azure;
+  opacity: 90%;
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid lightgray;
+  flex-wrap: wrap;
+}
+container {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  width: 100%;
+}
+.nav-space {
+  width: 300px;
+  justify-content: center;
+  align-items: center;
+}
 
 #twitter img {
   display: none;
@@ -50,7 +39,7 @@ body {
 }
 
 nav {
-  display: inline-flex;
+  display: flex;
   justify-content: center;
   align-items: center;
 }
@@ -59,7 +48,6 @@ a {
   text-decoration: none;
   color: #222222;
 }
-// git logo style
 #git {
   display: flex;
   justify-content: flex-start;
@@ -72,67 +60,56 @@ text {
   /* justify-content: flex-start; */
   padding: 0 0.2rem;
 }
-// main {
-//   display: flex;
-//   // flex-flow: row wrap;
-//   padding-top: 3.5rem;
-//   background-color: aliceblue;
-//   justify-content: center;
-//   align-items: center;
-//   max-width: 1700px;
-//   margin-inline: auto;
-// }
-
-// section {
-//   display: flex;
-//   /* width: 100%; */
-//   justify-content: center;
-// }
-
-article {
+main {
+  display: flex;
+  /* flex-flow: row wrap;*/
+  /* justify-content: center; */
+  padding-top: 5rem;
+  background-color: aliceblue;
+  justify-content: center;
+}
+section {
+  display: flex;
+  border: 3px solid red;
+  /* width: 100%; */
+  flex-flow: row wrap;
+  justify-content: center;
+  max-width: 1700px;
+  /* background-color: purple; */
+  margin: auto;
+}
+.Octocats {
   border: 3px solid green;
   display: flex;
-  flex-flow: row wrap;
+  flex-flow: column wrap;
+  padding: 1rem;
   align-items: center;
-  padding: 1rem 2rem;
 }
-article > .octocat {
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: space-around;
-  margin-inline: auto;
-  // margin: 1fr;
-  max-width: 50%;
-}
+
 .small {
   border: 3px solid purple;
   display: flex;
   border-radius: 9999px;
   /* align-items: flex-end; */
 }
-
-.kitty {
-  border: 1px solid lightgray;
-  border-radius: 1rem;
-  background-color: #ffffff;
-}
-
 .tagged {
   display: flex;
-  // flex-flow: row wrap;
   width: 100%;
-  // max-width: 402px;
   padding-left: 0;
   /* border: solid blue; */
   border: 3px solid blue;
   justify-content: space-between;
 }
-
+.kitty {
+  border: 1px solid lightgray;
+  border-radius: 1rem;
+  background-color: #ffffff;
+}
 li.detail {
   display: flex;
 }
 ul {
-  // border: 3px solid red;
+  border: 3px solid red;
   padding: 0;
   display: flex;
   justify-content: space-around;
@@ -165,35 +142,35 @@ footer {
   }
 } */
 
-// @media all and (780px >= width <= 915px) {
-//   main {
-//     display: flex;
-//     flex-direction: column;
-//     justify-content: flex-start;
-//   }
-//   section {
-//     display: flex;
-//     flex-direction: column;
-//     justify-content: center;
-//   }
-//   .kitty {
-//     height: auto;
-//     width: 100%;
-//   }
-//   #twitter {
-//     content: url(src/twitter.png);
-//   }
-//   nav {
-//     display: flex;
-//     justify-content: flex-end;
-//     /* font-size: 14px; */
-//     /* content: icon="menu"; */
-//   }
+@media all and (780px > width) {
+  main {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+  section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .kitty {
+    height: auto;
+    width: 100%;
+  }
+  #twitter {
+    content: url(src/twitter.png);
+  }
+  nav {
+    display: flex;
+    justify-content: flex-end;
+    /* font-size: 14px; */
+    /* content: icon="menu"; */
+  }
 
-//   /* article {
-//     flex: 1 auto;
-//   } */
-// }
+  /* article {
+    flex: 1 auto;
+  } */
+}
 /* desktop */
 @media all and (width < 440px) {
   main {
@@ -201,7 +178,7 @@ footer {
   }
 }
 
-@media all and (width >= 485) {
+@media all and (width > 485) {
   .kitty {
     height: auto;
     width: 100%;
@@ -250,7 +227,7 @@ footer {
   }
 }
 
-@media all and (width >=1750px) {
+@media all and (width > 1750px) {
   /* section {
     width: 80%;
     justify-content: center;

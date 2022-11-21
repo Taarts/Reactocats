@@ -1,12 +1,12 @@
 import React from 'react'
-// import navigation from '.src/components/navigation/navigation.css'
+import './navigation.scss'
 
 export function Navigation() {
   return (
-    <div>
-      <header>
+    <div className="d-sa">
+      <header className="mb-6 ">
         <div className="container">
-          <nav>
+          <nav className="red-outline d-flex flex-items-center text-gray nav-space">
             <div className="left-hand-side">
               <ul>
                 <li>

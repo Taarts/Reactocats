@@ -1,9 +1,10 @@
 import React from 'react'
+import './octocats.scss'
 
 type octocatProps = {
   name: string
   image: string
-  link: string
+  link: URL
   authorLink: string
   catNum: number
   authorImg: string
@@ -11,7 +12,7 @@ type octocatProps = {
 
 export function Octocat(props: octocatProps) {
   return (
-    <div className="octocat">
+    <div className="Octocats">
       <a href={props.name}>
         <img
           className="kitty"
